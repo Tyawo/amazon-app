@@ -2,11 +2,18 @@
 
 ## Overview
 
-The Node.js & MySQL is an Amazon-like storefront which takes in orders from customers and deplete stock from the store's inventory. If requested it also provide the summary of the highest-grossing departments in the store.
+The bamazon-app is an Amazon-like storefront which takes in orders from customers and deplete stock from the store's inventory. If requested it also provides the summary of the highest-grossing departments in the store.
 
 Make sure you save and require the MySQL and Inquirer npm packages in your homework files--your app will need them for data input and storage.
 
 ## Submission Guide
+
+The app uses 
+* MySQl packages for data storage
+ 
+* Inquirer npm packages for data input
+
+
 
 Make sure you use the normal GitHub. Because this is a CLI App, there will be no need to deploy it to Heroku. This time, though, you need to include screenshots, a gif, and/or a video showing us that you got the app working with no bugs. You can include these screenshots or a link to a video in a `README.md` file.
 
