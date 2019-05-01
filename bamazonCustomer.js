@@ -31,4 +31,40 @@ connection.connect(function (err) {
     },
        // After the prompt, store the user's response in a variable called response.
   ])
- 
+  
+  .then(function (answers) {
+
+      connection.query("SELECT * FROM products WHERE item_id = " + answers.item_id, function (err, res) {
+
+        // calculate the total purchase using price and user quantity
+        try {
+          var currentPrice = res[0].price;
+          var total = (answers.quantity) * currentPrice.toFixed(2);
+
+
+             if (res[0].stock_quantity < answers.quantity) {
+                console.log("Insufficient quantity");
+
+              // Update stock_quantity and display total purchase to the customer
+              }
+              else {
+               connection.query("UPDATE products SET stock_quantity = stock_quantity - "
+                 + answers.quantity + "WHERE item_id = " + answers.item_id, function (err, res) {
+
+                    console.log("Inventory Updated");
+                    console.log("Your total is: $" + total);
+                    console.log("See you again");
+
+                });
+          }
+        } catch (err) {
+          console.log(err);
+        }
+
+        connection.end();
+
+      });
+
+
+    })
+})
