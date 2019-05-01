@@ -22,7 +22,7 @@ Once the js file is loaded, the user follows the instructions and answers the qu
 
 ## Gif
 
-  ![All BAMAZON GIF-images] (https://github.com/Tyawo/amazon-app/blob/master/gif/snipetb.gif)
+  [All BAMAZON GIF-images](https://github.com/Tyawo/amazon-app/blob/master/gif/snipetb.gif)
     
 
 
